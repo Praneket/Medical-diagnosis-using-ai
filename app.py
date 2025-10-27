@@ -37,9 +37,54 @@ width: 100%;
 height: 100%;
 background-color: rgba(0, 0, 0, 0.7);
 }}
+
+
 </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        .stApp {
+            color: white;
+        }
+        # Add this before your selectbox
+
+            h1, h2, h3, h4, h5, h6, p , div ,  {
+            color: #ffffff !important;
+        }
+            
+            div.stButton > button {
+        color: #000000 !important;
+    }
+            
+        /* Change color of selected text in selectbox */
+        div[data-baseweb="select"] > div {
+            color: #000000 !important;          
+        }
+        
+
+        /* Change color of dropdown options */
+        div[data-baseweb="select"] span {
+            color: #ffffff !important;          
+        }
+        div[data-baseweb="select"] [role="option"] {
+            color: #000000 !important;          /* gold text for dropdown options */
+        }
+
+        /* OR for input label text */
+        label {
+            color: #ffffff !important;
+        }
+        /* You can also specifically target headers, paragraphs, etc. */
+        
+            
+        /* Change text color inside selectbox dropdown */
+        .stSelectbox div[data-baseweb="select"] span {
+        color: #000000 !important; /* Replace with your desired color */
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
 
 # Load the saved models
 models = {
